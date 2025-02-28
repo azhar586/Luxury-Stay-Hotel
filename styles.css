@@ -120,5 +120,29 @@ footer {
         height: auto; /* Maintain aspect ratio */
     }
 }
+/* Existing styles for your images */
+.image-placeholder img {
+    height: 500px; /* Adjust the height for better visibility */
+    width: 50%;    /* Ensure the image spans the full width */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* New code for responsive design on smaller screens */
+
+/* Make images responsive for smaller screen sizes */
+@media (max-width: 768px) {
+    .image-placeholder img {
+        width: 100%;  /* Full width for tablet-sized screens */
+        height: auto; /* Adjust height automatically to maintain aspect ratio */
+    }
+}
+
+/* For very small devices (smartphones in portrait mode) */
+@media (max-width: 480px) {
+    .image-placeholder img {
+        width: 100%;  /* Full width on small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
 
 
