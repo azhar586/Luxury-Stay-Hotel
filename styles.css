@@ -101,7 +101,24 @@ footer {
 }
 .image-placeholder img {
     height: 500px; /* Adjust the height for better visibility */
-    width: 50%;   /* Ensure the image spans the full width */
+    width: 50%;    /* Ensure the image spans the full width */
     object-fit: cover; /* Ensures the image covers the area without distortion */
 }
+
+/* Make images responsive for smaller screen sizes */
+@media (max-width: 768px) {
+    .image-placeholder img {
+        width: 100%;  /* Make images take the full width of the container on mobile */
+        height: auto; /* Adjust height automatically to maintain aspect ratio */
+    }
+}
+
+/* For very small devices (like smartphones in portrait mode) */
+@media (max-width: 480px) {
+    .image-placeholder img {
+        width: 100%;  /* Ensure full width on small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
 
