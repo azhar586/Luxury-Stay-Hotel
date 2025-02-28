@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Booking Confirmation</h1>
+    </header>
+    <main>
+        <section class="confirmation">
+            <h2>Your Booking has been Confirmed!</h2>
+            <p id="booking-details"></p>
+            <a href="index.html" class="btn">Go Back to Homepage</a>
+        </section>
+    </main>
+    <script>
+        // Retrieve and display booking details from the query string
+        const urlParams = new URLSearchParams(window.location.search);
+        const checkIn = urlParams.get('check-in');
+        const checkOut = urlParams.get('check-out');
+        const roomType = urlParams.get('room-type');
+        const guests = urlParams.get('guests');
+
+        const bookingDetails = `Check-in: ${checkIn} <br> Check-out: ${checkOut} <br> Room Type: ${roomType} <br> Guests: ${guests}`;
+        document.getElementById('booking-details').innerHTML = bookingDetails;
+    </script>
+</body>
+</html>
+
